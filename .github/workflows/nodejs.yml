@@ -7,6 +7,7 @@ on:
     branches:
       - main
 
+
 jobs:
   ci:
     name: Nodejs CI
@@ -17,7 +18,9 @@ jobs:
         node-version: [14.x]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v1
