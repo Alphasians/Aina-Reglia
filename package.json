@@ -1,7 +1,7 @@
 {
   "name": "alphasians-aina",
   "version": "0.0.1",
-  "description": "Javascript Repository Template",
+  "description": "Alphasians AINA",
   "keywords": [],
   "homepage": "https://github.com/Alphasians/AINA",
   "bugs": {
@@ -24,8 +24,21 @@
     "lint": "npx eslint .",
     "lint:fix": "npx eslint . --fix"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@discordjs/opus": "^0.5.3",
+    "cheerio": "^1.0.0-rc.10",
+    "discord.js": "^12.5.3",
+    "discord.js-commando": "github:discordjs/Commando",
+    "dotenv": "^10.0.0",
+    "ffmpeg-static": "^4.4.0",
+    "require-all": "^3.0.0",
+    "sequelize": "^6.6.5",
+    "simple-youtube-api": "^5.2.1",
+    "sqlite": "^4.0.23",
+    "ytdl-core": "^4.9.1"
+  },
   "devDependencies": {
+    "@types/node": "^16.4.13",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.30.0",
