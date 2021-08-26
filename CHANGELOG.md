@@ -1,3 +1,12 @@
+## [0.2.2](https://github.com/Alphasians/AINA/compare/v0.2.1...v0.2.2) (2021-08-26)
+
+
+### Bug Fixes
+
+* ci ([c4f812f](https://github.com/Alphasians/AINA/commit/c4f812ff0a9a7f92b98bc54bcb0c7d21cd4fe2c7))
+
+
+
 ## [0.2.1](https://github.com/Alphasians/AINA/compare/v0.2.0...v0.2.1) (2021-08-26)
 
 
