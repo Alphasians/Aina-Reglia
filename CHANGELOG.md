@@ -1,3 +1,12 @@
+## [0.2.1](https://github.com/Alphasians/AINA/compare/v0.2.0...v0.2.1) (2021-08-26)
+
+
+### Bug Fixes
+
+* package installation ([31881f9](https://github.com/Alphasians/AINA/commit/31881f92a1c5a233ff941c1088c8c93640925c70))
+
+
+
 # [0.2.0](https://github.com/Alphasians/AINA/compare/v0.1.0...v0.2.0) (2021-08-26)
 
 
