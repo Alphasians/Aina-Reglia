@@ -1,3 +1,12 @@
+# [0.2.0](https://github.com/Alphasians/AINA/compare/v0.1.0...v0.2.0) (2021-08-26)
+
+
+### Features
+
+* **ci:** use new token ([a3de6b8](https://github.com/Alphasians/AINA/commit/a3de6b8cd58596b80946267575161c6ac2c652aa))
+
+
+
 # [0.1.0](https://github.com/Alphasians/AINA/compare/v0.0.1...v0.1.0) (2021-08-25)
 
 
