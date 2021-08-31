@@ -3,7 +3,7 @@ description: File a documentation request/report
 title: "[Docs]: "
 labels: ["📄 aspect: text", "✨ goal: improvement", "🚦 status: awaiting triage"]
 assignees:
-  - krishdevdb
+  - sonichigo
 body:
   - type: markdown
     attributes:

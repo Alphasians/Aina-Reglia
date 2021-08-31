@@ -3,7 +3,7 @@ description: File a bug report
 title: "[Bug]: "
 labels: ["💻 aspect: code", "🛠 goal: fix", "🚦 status: awaiting triage"]
 assignees:
-  - krishdevdb
+  - sonichigo
 body:
   - type: markdown
     attributes:

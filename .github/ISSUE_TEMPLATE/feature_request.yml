@@ -3,7 +3,7 @@ description: File a feature request
 title: "[Feat]: "
 labels: ["💻 aspect: code", "⭐ goal: addition", "🚦 status: awaiting triage"]
 assignees:
-  - krishdevdb
+  - sonichigo
 body:
   - type: markdown
     attributes:
