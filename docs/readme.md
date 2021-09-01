@@ -2,6 +2,7 @@ Documentation for "Music commands" and "Mod commands" of AinaBot.
 
 
 Music commands: 
+
 “ALL THE FUNCTIONALITY AVAILABLE ONLY IF YOU ARE MEMBER OF THE SERVER OR HAVE ACCESS PERMISSION FOR THE ROLE”
 
 1)Play: - 
@@ -24,6 +25,7 @@ If there is no songs in queue, the bot will respond with “There are no songs i
 
 
 Mod commands:
+
 “ALL THE FUNCTIONALITY AVAILABLE ONLY IF YOU ARE MEMBER OF THE SERVER OR HAVE ACCESS PERMISSION FOR THE ROLE”
 
 1)Kick:-
