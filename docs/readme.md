@@ -29,6 +29,7 @@ Mod commands:
 1)Kick:-
 The bot responds to “?kick” command, the bot will  respond with “Who do you want to kick?”, You should tag the username of whom you want to kick out of the server. The bot will ask for the reason for kicking him out, by responding “Why do you want to kick this user”, you should mention the reasons too.
  If the user is not in the group, the bot will respond with “Please try again with a valid user”. If the user trying to kick is someone who can’t be kicked out of the server, the bot will respond with “Something went wrong when trying to kick this user, I probably do not have the permission to kick him”.
+
 2)Ban:-
 The bot responds to “?ban” command. This command Bans a tagged member. The bot will  respond with “Please mention the user you want to ban with @ or provide his ID”. You should tag the username of whom you want to ban. The bot will ask for the reason for banning him, by responding “Why do you want to ban this user”, you should mention the reasons too.
 If the user is not in the group, the bot will respond with “Please try again with a valid user”. If the user trying to ban is someone who can’t be ban out of the server, the bot will respond with “Something went wrong when trying to ban this user, I probably do not have the permission to ban him”.
