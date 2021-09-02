@@ -4,17 +4,17 @@ const { MessageEmbed } = require('discord.js')
 module.exports = class BanCommand extends Command {
   constructor (client) {
     super(client, {
-      name: 'ban',
-      aliases: ['ban-member', 'ban-hammer'],
-      memberName: 'ban',
+      name: 'unban',
+      aliases: ['unban-member', 'unban-prick'],
+      memberName: 'unban',
       group: 'moderation',
-      description: 'Bans a tagged member',
+      description: 'UnBans a tagged member',
       guildOnly: true,
       userPermissions: ['BAN_MEMBERS'],
       clientPermissions: ['BAN_MEMBERS'],
       args: [
         {
-          key: 'userToBan',
+          key: 'userTounBan',
           prompt:
             'Please mention the user you want to ban with @ or provide his ID',
           type: 'string'
@@ -28,20 +28,21 @@ module.exports = class BanCommand extends Command {
     })
   }
 
-  run (message, { userToBan, reason }) {
+  run (message, { userTounBan, reason }) {
     const user =
       message.mentions.members.first() ||
-      message.guild.members.fetch(userToBan);
+      message.guild.members.fetch(userTounBan);
+
     if (user === undefined) { return message.channel.send('Please try again with a valid user') }
     const member = message.guild.members.resolve(user);
     member
-      .ban({ days: 7, reason: 'your reason here' })
+      .bans.remove(reason)
       .then(() => {
-        const banEmbed = new MessageEmbed()
-          .addField('Banned:', userToBan)
+        const unbanEmbed = new MessageEmbed()
+          .addField('UnBanned:', userTounBan)
           .addField('Reason', reason)
           .setColor('#420626')
-        message.channel.send(banEmbed)
+        message.channel.send(unbanEmbed)
       })
       .catch((e) => {
         message.say(
