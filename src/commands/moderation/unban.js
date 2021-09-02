@@ -31,10 +31,10 @@ module.exports = class BanCommand extends Command {
   run (message, { userTounBan, reason }) {
     const user =
       message.mentions.members.first() ||
-      message.guild.members.fetch(userTounBan);
+      message.guild.members.fetch(userTounBan)
 
     if (user === undefined) { return message.channel.send('Please try again with a valid user') }
-    const member = message.guild.members.resolve(user);
+    const member = message.guild.members.resolve(user)
     member
       .bans.remove(reason)
       .then(() => {

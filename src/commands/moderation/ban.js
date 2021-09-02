@@ -31,9 +31,9 @@ module.exports = class BanCommand extends Command {
   run (message, { userToBan, reason }) {
     const user =
       message.mentions.members.first() ||
-      message.guild.members.fetch(userToBan);
+      message.guild.members.fetch(userToBan)
     if (user === undefined) { return message.channel.send('Please try again with a valid user') }
-    const member = message.guild.members.resolve(user);
+    const member = message.guild.members.resolve(user)
     member
       .ban({ days: 7, reason: 'your reason here' })
       .then(() => {
