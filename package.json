@@ -1,11 +1,11 @@
 {
   "name": "alphasians-aina",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Alphasians AINA",
   "keywords": [],
-  "homepage": "https://github.com/Alphasians/AINA",
+  "homepage": "https://github.com/Alphasians/AinaBot",
   "bugs": {
-    "url": "https://github.com/Alphasians/AINA/issues"
+    "url": "https://github.com/Alphasians/AinaBot/issues"
   },
   "license": "MIT",
   "contributors": [],
@@ -16,7 +16,7 @@
     "src": "src",
     "lib": "dist"
   },
-  "repository": "github:Alphasians/AINA",
+  "repository": "github:Alphasians/AinaBot",
   "scripts": {
     "start": "node .",
     "prepare": "husky install",
