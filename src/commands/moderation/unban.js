@@ -10,8 +10,8 @@ module.exports = class BanCommand extends Command {
       group: 'moderation',
       description: 'UnBans a tagged member',
       guildOnly: true,
-      userPermissions: ['BAN_MEMBERS','ADMINISTRATOR'],
-      clientPermissions: ['BAN_MEMBERS','ADMINISTRATOR'],
+      userPermissions: ['BAN_MEMBERS'],
+      clientPermissions: ['BAN_MEMBERS'],
       args: [
         {
           key: 'userTounBan',
@@ -21,7 +21,7 @@ module.exports = class BanCommand extends Command {
         },
         {
           key: 'reason',
-          prompt: 'Why do you want to unban this user',
+          prompt: 'Why do you want to ban this user',
           type: 'string'
         }
       ]
@@ -29,16 +29,15 @@ module.exports = class BanCommand extends Command {
   }
 
   run (message, { userTounBan, reason }) {
+    const user =
+      message.mentions.members.first() ||
+      message.guild.members.fetch(userTounBan)
 
-    message.guild.fetchBans()
-    .then(bans => {
-    let user = bans.find(banInfo => banInfo.user.id === userTounBan)
+    if (user === undefined) { return message.channel.send('Please try again with a valid user') }
     const member = message.guild.members.resolve(user)
-    if(!user) 
-      return message.reply("The mentioned ID is not banned")
-    message.guild
-    .members.unban({member, reason})
-    .then(() => {
+    member
+      .bans.remove(reason)
+      .then(() => {
         const unbanEmbed = new MessageEmbed()
           .addField('UnBanned:', userTounBan)
           .addField('Reason', reason)
@@ -51,6 +50,5 @@ module.exports = class BanCommand extends Command {
         )
         return console.error(e)
       })
-  })
-}
+  }
 }
