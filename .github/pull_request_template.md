@@ -1,15 +1,16 @@
-## Description
+<!-- If applicable, reference the issue number that this PR closes -->
+closes #ISSUE-NO
 
-- [ ] I have followed the [code of conduct](https://github.com/Alphasians/AINA/blob/main/contributing.md)
-- [ ] I have followed the [contributing guidelines](https://github.com/Alphasians/AINA/blob/main/contributing.md).
-- [ ] Either I have tested the code or my changes are not related to code.
+#### What does this PR do?
 
-## Related Issue
+#### Description of the task to be completed?
 
-fixes # <!-- Creating an issue before an Pull Request never hurts -->
+#### How can this be manually tested?
 
-## Context
+#### Any background context you want to provide?
 
-## How Has This Been Tested?
+#### Is there any relevant issue to this PR?
 
-## Screenshots (if appropriate):
+#### Screenshots (if appropriate)
+
+#### Questions
