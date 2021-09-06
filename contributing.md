@@ -30,8 +30,8 @@ Since the new GitHub Issue forms we only suggest you to include most information
 
 Unsure where to begin contributing to Atom? You can start by looking through these `beginner` and `help-wanted` issues:
 
-- [Beginner issues](https://github.com/Alphasians/AINA/labels/good%20first%20issue) - issues which should only require a few lines of code, and a test or two.
-- [Help wanted issues](https://github.com/Alphasians/AINA/labels/good%20first%20issue) - issues which should be a bit more involved than `beginner` issues.
+- [Beginner issues](https://github.com/Alphasians/AINA/labels/good%20first%20issue) - *issues which should only require a few lines of code, and a test or two.*
+- [Help wanted issues](https://github.com/Alphasians/AINA/labels/good%20first%20issue) - *issues which should be a bit more involved than `beginner` issues.*
 
 ### Pull Requests
 

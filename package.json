@@ -8,7 +8,7 @@
     "url": "https://github.com/Alphasians/AinaBot/issues"
   },
   "license": "MIT",
-  "contributors": [],
+  "contributors": ["Sonichigo", "Krishdevdb"],
   "main": "src/index.js",
   "bin": {},
   "man": [],
