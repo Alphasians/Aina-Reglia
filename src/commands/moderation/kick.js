@@ -38,7 +38,7 @@ module.exports = class KickCommand extends Command {
         const kickEmbed = new MessageEmbed()
           .addField('Kicked:', userToKick)
           .addField('Reason:', reason)
-          .setColor('#420626')
+          .setColor('#ff0000')
         message.channel.send(kickEmbed)
       })
       .catch((e) => {

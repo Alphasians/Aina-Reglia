@@ -21,7 +21,7 @@ module.exports = class BanCommand extends Command {
         },
         {
           key: 'reason',
-          prompt: 'Why do you want to ban this user',
+          prompt: 'Why do you want to unban this user',
           type: 'string'
         }
       ]
@@ -29,26 +29,27 @@ module.exports = class BanCommand extends Command {
   }
 
   run (message, { userTounBan, reason }) {
-    const user =
-      message.mentions.members.first() ||
-      message.guild.members.fetch(userTounBan)
-
-    if (user === undefined) { return message.channel.send('Please try again with a valid user') }
-    const member = message.guild.members.resolve(user)
-    member
-      .bans.remove(reason)
-      .then(() => {
-        const unbanEmbed = new MessageEmbed()
-          .addField('UnBanned:', userTounBan)
-          .addField('Reason', reason)
-          .setColor('#420626')
-        message.channel.send(unbanEmbed)
-      })
-      .catch((e) => {
-        message.say(
-          'Something went wrong when trying to ban this user, I probably do not have the permission to ban him'
-        )
-        return console.error(e)
+    message.guild.fetchBans()
+      .then(bans => {
+        const user = bans.find(banInfo => banInfo.user.id === userTounBan)
+        if (!user) {
+          return message.reply('The mentioned ID is not banned')
+        }
+        message.guild
+          .members.unban(userTounBan, reason)
+          .then(() => {
+            const unbanEmbed = new MessageEmbed()
+              .addField('UnBanned:', userTounBan)
+              .addField('Reason', reason)
+              .setColor('#420626')
+            message.channel.send(unbanEmbed)
+          })
+          .catch((e) => {
+            message.say(
+              'Something went wrong when trying to ban this user, I probably do not have the permission to ban him'
+            )
+            return console.error(e)
+          })
       })
   }
 }
