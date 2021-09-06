@@ -4,7 +4,7 @@ const { MessageEmbed } = require('discord.js')
 module.exports = class LoopCommand extends Command {
   constructor (client) {
     super(client, {
-      name: 'loop',
+      name: 'Loop',
       group: 'music',
       memberName: 'loop',
       guildOnly: true,
