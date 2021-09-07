@@ -8,7 +8,10 @@
     "url": "https://github.com/Alphasians/AinaBot/issues"
   },
   "license": "MIT",
-  "contributors": [],
+  "contributors": [
+    "Sonichigo",
+    "Krishdevdb"
+  ],
   "main": "src/index.js",
   "bin": {},
   "man": [],
@@ -27,6 +30,7 @@
   "dependencies": {
     "@discordjs/opus": "^0.5.3",
     "cheerio": "^1.0.0-rc.10",
+    "discord-xp": "^1.1.16",
     "discord.js": "^12.5.3",
     "discord.js-commando": "github:discordjs/Commando",
     "dotenv": "^10.0.0",
