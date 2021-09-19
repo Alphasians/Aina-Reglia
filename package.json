@@ -21,7 +21,7 @@
   },
   "repository": "github:Alphasians/AinaBot",
   "scripts": {
-    "start": "nodemon .",
+    "start": "node src/index.js",
     "prepare": "husky install",
     "commit": "npx --no-install cz",
     "lint": "npx eslint .",

@@ -1,6 +1,5 @@
-const { Command } = require('discord.js-commando')
+/* const { Command } = require('discord.js-commando')
 const { MessageEmbed } = require('discord.js')
-const Levels = require('discord-xp')
 
 module.exports = class BanCommand extends Command {
   constructor (client) {
@@ -37,3 +36,4 @@ module.exports = class BanCommand extends Command {
       })
   }
 }
+*/
