@@ -2,12 +2,12 @@ const Levels = require('discord-xp')
 
 module.exports = {
   name: 'message',
-  execute (message, client) {
+  async execute (message, client) {
     if (message.author.bot) return
     if (message.channel.type === 'dm') return
 
     const randomXP = Math.floor(Math.random() * 29) + 1
-    const hasLeveledUP = Levels.appendXp(message.author.id, message.guild.id, randomXP)
+    const hasLeveledUP = await Levels.appendXp(message.author.id, message.guild.id, randomXP)
     if (hasLeveledUP) {
       const user = Levels.fetch(message.author.id, message.guild.id)
       message.channel.send(`${message.member} leveled up to ${user.level}`)
