@@ -1,7 +1,6 @@
-/* const { Command } = require('discord.js-commando')
-const { MessageEmbed } = require('discord.js')
-
-module.exports = class BanCommand extends Command {
+const { Command } = require('discord.js-commando')
+const { Levels } = require('discord-xp')
+module.exports = class Level extends Command {
   constructor (client) {
     super(client, {
       name: 'level',
@@ -13,27 +12,18 @@ module.exports = class BanCommand extends Command {
     })
   }
 
-  run (message, args, client) {
-    const user =
+  async run (message, args, client) {
+    const mentionedMember =
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0])
-    if (user === undefined) { return message.channel.send('Please try again with a valid user') }
-    const member = message.guild.members.resolve(user)
-    member
-      .ban({ days: 7, reason: 'your reason here' })
-      .then(() => {
-        const banEmbed = new MessageEmbed()
-          .addField('Banned:')
-          .addField('Reason')
-          .setColor('#1900ff')
-        message.channel.send(banEmbed)
-      })
-      .catch((e) => {
-        message.say(
-          'Something went wrong when trying to ban this user, I probably do not have the permission to ban him'
-        )
-        return console.error(e)
-      })
+    const member = await Levels.fetch(mentionedMember.user.id, message.guild.id)
+    if (!member) {
+      return message.channel.send('Member has not started yet!')
+    }
+    try {
+      message.channel.send(`${mentionedMember.user.tag} is level ${member.level} has ${member.xp}`)
+    } catch (err) {
+      return console.error(err)
+    }
   }
 }
-*/
