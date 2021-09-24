@@ -1,6 +1,9 @@
 const CommandoClient = require('discord.js-commando').CommandoClient
 const Structures = require('discord.js').Structures
+const Levels = require('discord-xp')
 const path = require('path')
+
+Levels.setURL('mongodb+srv://Animesh:ffkiCSvUThMJLKH7@cluster0.jso46.mongodb.net/AinaReglia?retryWrites=true&w=majority')
 
 const dotenv = require('dotenv')
 
@@ -63,6 +66,13 @@ client.once('ready', () => {
       ),
     10000
   )
+})
+
+client.on('message', async (message) => {
+  if (message.author.bot) return
+  if (message.channel.type === 'dm') return
+  const randomXp = Math.floor(Math.random() * 10) + 10
+  const hasLevelUp = await Levels.appendXp(message.author.id, message.guild.id, randomXp)
 })
 
 client.login(process.env.BOT_TOKEN)
