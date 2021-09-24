@@ -24,3 +24,6 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+#Old Counter
+events/
