@@ -19,7 +19,6 @@ jobs:
       - name: npm install and lint
         run: |
           npm ci
-          npm run lint --if-present
 
   release:
     runs-on: ubuntu-latest

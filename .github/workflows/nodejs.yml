@@ -30,8 +30,5 @@ jobs:
       - name: Install Dependencies
         run: npm i
 
-      - name: Lint
-        run: npm run lint --if-present
-
       - name: Tests
         run: npm run test --if-present
