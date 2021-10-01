@@ -40,7 +40,8 @@ client.registry
   .registerGroups([
     ['music', 'Music Commands'],
     ['moderation', 'Server Moderation'],
-    ['level', 'Level Commands']
+    ['level', 'Level Commands'],
+    ['misc', 'Misc Commands']
   ])
   .registerDefaultGroups()
   .registerDefaultCommands({
