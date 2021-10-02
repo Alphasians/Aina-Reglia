@@ -3,7 +3,7 @@ const Structures = require('discord.js').Structures
 const Levels = require('discord-xp')
 const path = require('path')
 
-Levels.setURL('mongodb+srv://Animesh:ffkiCSvUThMJLKH7@cluster0.jso46.mongodb.net/AinaReglia?retryWrites=true&w=majority')
+Levels.setURL(process.env.mongoPath)
 
 const dotenv = require('dotenv')
 
