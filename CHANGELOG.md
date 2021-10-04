@@ -1,3 +1,12 @@
+# [0.4.0](https://github.com/Alphasians/AinaBot/compare/v0.3.0...v0.4.0) (2021-10-04)
+
+
+### Features
+
+* level up command ([302b570](https://github.com/Alphasians/AinaBot/commit/302b57021c33c00196764315fcd86bcf842242d5))
+
+
+
 # [0.3.0](https://github.com/Alphasians/AinaBot/compare/v0.2.3...v0.3.0) (2021-10-01)
 
 
@@ -23,15 +32,6 @@
 ### Bug Fixes
 
 * package installation ([31881f9](https://github.com/Alphasians/AinaBot/commit/31881f92a1c5a233ff941c1088c8c93640925c70))
-
-
-
-# [0.2.0](https://github.com/Alphasians/AinaBot/compare/v0.1.0...v0.2.0) (2021-08-26)
-
-
-### Features
-
-* **ci:** use new token ([a3de6b8](https://github.com/Alphasians/AinaBot/commit/a3de6b8cd58596b80946267575161c6ac2c652aa))
 
 
 
