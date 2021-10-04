@@ -74,6 +74,10 @@ client.on('message', async (message) => {
   if (message.channel.type === 'dm') return
   const randomXp = Math.floor(Math.random() * 10) + 10
   const hasLevelUp = await Levels.appendXp(message.author.id, message.guild.id, randomXp)
+  
+  if (hasLevelUp) {
+    message.reply(`Congrats! You've leveled up to level: ${(await Levels.fetch(message.author.id, message.guild.id)).level}`)
+  }
 })
 
 client.login(process.env.BOT_TOKEN)
