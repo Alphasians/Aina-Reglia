@@ -1,6 +1,6 @@
-# AINA
-A Discord Bot made javascript
-The official [AinaBOT](https://github.com/Alphasians/AinaBot.git) for the official [Discord server].
+# AINA REGLIA
+A Discord Bot made in javascript
+The official [AinaBOT](https://github.com/Alphasians/AinaBot.git) for the official [Discord server](https://discord.gg/bTUVVq83BB).
 
 
 ## Config / Secrets environment variables
@@ -22,9 +22,7 @@ $ git clone https://github.com/Alphasians/AinaBot.git
 $ cd AinaBot
 $ npm install
 ```
-### Discord Docs
-
-- https://discord.com/developers/docs/intro#bots-and-apps
+### [Discord Docs](https://discord.com/developers/docs/intro#bots-and-apps)
 
 ## Running the app
 
