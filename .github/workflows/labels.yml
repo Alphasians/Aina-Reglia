@@ -12,7 +12,7 @@ jobs:
       with:
         node-version: '14'
     - name: EddieHubCommunity labels Action
-    - uses: EddieHubCommunity/gh-action-open-source-labels@main
+      uses: EddieHubCommunity/gh-action-open-source-labels@main
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         owner-name: 'Alphasians'
