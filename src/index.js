@@ -2,10 +2,10 @@ const CommandoClient = require('discord.js-commando').CommandoClient
 const Structures = require('discord.js').Structures
 const Levels = require('discord-xp')
 const path = require('path')
+require('dotenv').config()
+const dotenv = require('dotenv')
 
 Levels.setURL(process.env.mongoPath)
-
-const dotenv = require('dotenv')
 
 dotenv.config({
   path: path.join(__dirname, '..', '.env')
@@ -82,4 +82,4 @@ client.on('message', async (message) => {
 
 client.login(process.env.BOT_TOKEN)
 
-const keep_alive = require('../keep_alive.js')
+//const keep_alive = require('../keep_alive.js')
