@@ -1,3 +1,12 @@
+# [0.5.0](https://github.com/Alphasians/AinaBot/compare/v0.4.0...v0.5.0) (2021-11-26)
+
+
+### Features
+
+* **new-command:** profile ([71a583a](https://github.com/Alphasians/AinaBot/commit/71a583a6ce87eec3218302147002bf3ecb54c454))
+
+
+
 # [0.4.0](https://github.com/Alphasians/AinaBot/compare/v0.3.0...v0.4.0) (2021-10-04)
 
 
@@ -23,15 +32,6 @@
 ### Bug Fixes
 
 * ci ([c4f812f](https://github.com/Alphasians/AinaBot/commit/c4f812ff0a9a7f92b98bc54bcb0c7d21cd4fe2c7))
-
-
-
-## [0.2.1](https://github.com/Alphasians/AinaBot/compare/v0.2.0...v0.2.1) (2021-08-26)
-
-
-### Bug Fixes
-
-* package installation ([31881f9](https://github.com/Alphasians/AinaBot/commit/31881f92a1c5a233ff941c1088c8c93640925c70))
 
 
 
