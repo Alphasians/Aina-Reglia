@@ -13,13 +13,14 @@
     "Krishdevdb"
   ],
   "main": "src/index.js",
-  "bin": {},
   "man": [],
   "directories": {
-    "src": "src",
-    "lib": "dist"
+    "doc": "docs"
   },
-  "repository": "github:Alphasians/AinaBot",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alphasians/AinaBot.git"
+  },
   "scripts": {
     "start": "nodemon src/index.js",
     "prepare": "husky install",
@@ -35,6 +36,7 @@
     "discord.js-commando": "github:discordjs/Commando",
     "dotenv": "^10.0.0",
     "ffmpeg-static": "^4.4.0",
+    "nodemon": "^2.0.15",
     "require-all": "^3.0.0",
     "sequelize": "^6.6.5",
     "simple-youtube-api": "^5.2.1",
@@ -62,5 +64,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "author": ""
 }
