@@ -210,7 +210,6 @@ module.exports = class PlayCommand extends Command {
               .setDescription(
                 `**[${queue[0].title}](${queue[0].url})** \nDuration: **[${queue[0].duration}]** \nRequested by: **${queue[0].memberDisplayName}**`
               )
-              .setFooter('©Gin-san Music Feature')
             if (queue[1]) {
               videoEmbed.addField(
                 'Next Song:',
