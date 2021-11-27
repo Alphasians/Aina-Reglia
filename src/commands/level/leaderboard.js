@@ -22,11 +22,11 @@ module.exports = class Level extends Command {
     }
     try {
       const leaderboard = await Levels.computeLeaderboard(message.client, rawLeaderboard,true)
-      const lb = leaderboard.map(e => `**${e.position}.${e.username}#${e.discriminator}**\n**Level:** ${e.level}\n**XP**: ${e.xp.toLocaleString()}`);
+      const lb = leaderboard.map(e => `**${e.position}.${e.username}#${e.discriminator}** is Level: ${e.level} with XP: ${e.xp.toLocaleString()}`);
       const Cleaderboard = new MessageEmbed()
         .setColor('#0099FF')
         .setTitle('Leaderboard')
-        .setDescription(`${lb.join("\n\n")}`)
+        .setDescription(`${lb.join("\n")}`)
       message.say(Cleaderboard)
     } catch (err) {
       return console.error(err)
