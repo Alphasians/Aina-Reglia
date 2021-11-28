@@ -15,7 +15,7 @@ module.exports = class LoopCommand extends Command {
           type: 'integer',
           prompt: 'How many times do you want to loop the song? Max 10',
           validate: (numOfTimesToLoop) =>
-            numOfTimesToLoop >= 1 && numOfTimesToLoop <= 10
+            numOfTimesToLoop >= 1 && numOfTimesToLoop <= 500
         }
       ]
     })
