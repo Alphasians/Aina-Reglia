@@ -1,4 +1,4 @@
-onst { Command } = require('discord.js-commando')
+const { Command } = require('discord.js-commando')
 const { MessageEmbed } = require('discord.js')
 const mongoCurrency = require('discord-mongo-currency');
 
