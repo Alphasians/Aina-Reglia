@@ -8,21 +8,33 @@ module.exports = class Economy extends Command {
   constructor (client) {
     super(client, {
       name: 'transfer',
-      group: 'currency',
+      group: 'currency',  
       memberName: 'transfer',
       description: 'Tranfer 200 Coin to friend!!',
-      guildOnly: true
+      guildOnly: true,
+      args: [
+        {
+          key: 'recipient',
+          type: 'member',
+          prompt: 'Whom do you want to send the money to?'
+        }
+        {
+          key: 'amount',
+          type: 'float',
+          prompt: 'How much money do you want to sent?'
+        }
+      ]
     })
   }
 
-  async run (message,args) {
-   const member = message.mentions.members.first();
+  async run (message, args) {
+   const member = args.recipient;
    const user = await mongoCurrency.findUser(message.member.id, message.guild.id);
-   const mem = await mongoCurrency.findUser(member.id, message.guild.id);
-   const amt = 200;
-   if(user.coinsInWallet > amt){
-   user.coinsInWallet -= amt;
-   mem.coinsInWallet += amt;
+   const recipient = await mongoCurrency.findUser(member.id, message.guild.id);
+   const amt = args.amount;
+
+   if (user.coinsInWallet > amt){
+      await user.deductCoins(message.member.id, message.guild.id, amt);
       await mongoCurrency.giveCoins(member.id, message.guild.id, amt );
       message.reply(`You have transfered ${amt} Coins to <@!${member.id}>`); 
    }
