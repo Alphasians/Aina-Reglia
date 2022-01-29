@@ -35,7 +35,7 @@ module.exports = class Economy extends Command {
 
    if (user.coinsInWallet >= amt){
       await mongoCurrency.giveCoins(member.id, message.guild.id, amt );
-      await mongoCurrency.takeCoins(message.member.id, message.guild.id, amt);
+      await mongoCurrency.deductCoins(message.member.id, message.guild.id, amt);
       message.reply(`You have transfered ${amt} Coins to <@!${member.id}>`); 
    }
    else {
