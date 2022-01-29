@@ -17,7 +17,7 @@ module.exports = class Economy extends Command {
           key: 'recipient',
           type: 'member',
           prompt: 'Whom do you want to send the money to?'
-        }
+        },
         {
           key: 'amount',
           type: 'float',
@@ -34,7 +34,6 @@ module.exports = class Economy extends Command {
    const amt = args.amount;
 
    if (user.coinsInWallet > amt){
-      await user.deductCoins(message.member.id, message.guild.id, amt);
       await mongoCurrency.giveCoins(member.id, message.guild.id, amt );
       message.reply(`You have transfered ${amt} Coins to <@!${member.id}>`); 
    }
