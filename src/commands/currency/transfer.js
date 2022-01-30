@@ -33,11 +33,12 @@ module.exports = class Economy extends Command {
    const recipient = await mongoCurrency.findUser(member.id, message.guild.id);
    const amt = args.amount;
 
-   if (user.coinsInWallet > amt){
+   if (user.coinsInWallet >= amt){
       await mongoCurrency.giveCoins(member.id, message.guild.id, amt );
+      await mongoCurrency.deductCoins(message.member.id, message.guild.id, amt);
       message.reply(`You have transfered ${amt} Coins to <@!${member.id}>`); 
    }
-   else{
+   else {
      message.reply(`You don't have enough funds to transfer`);
    }
   }
