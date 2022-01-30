@@ -1,3 +1,12 @@
+## [0.5.2](https://github.com/Alphasians/AinaBot/compare/v0.5.1...v0.5.2) (2022-01-30)
+
+
+### Bug Fixes
+
+* coins not deducted ([7f31763](https://github.com/Alphasians/AinaBot/commit/7f31763b09400003cc11c2a7940374149a11f005))
+
+
+
 ## [0.5.1](https://github.com/Alphasians/AinaBot/compare/v0.5.0...v0.5.1) (2022-01-28)
 
 
