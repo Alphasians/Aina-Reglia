@@ -10,7 +10,7 @@ module.exports = class Economy extends Command {
       name: 'wallet',
       group: 'currency',
       memberName: 'currency',
-      description: 'Deposit money to bank',
+      description: 'Show Account Balance',
       guildOnly: true
     })
   }
