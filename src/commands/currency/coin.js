@@ -1,4 +1,4 @@
-onst { Command } = require('discord.js-commando')
+const { Command } = require('discord.js-commando')
 const { MessageEmbed } = require('discord.js')
 const mongoCurrency = require('discord-mongo-currency');
 
@@ -25,3 +25,4 @@ module.exports = class Economy extends Command {
       message.reply(`You earned ${randomCoins} Coins`); 
   }
 }
+

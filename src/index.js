@@ -41,7 +41,8 @@ client.registry
     ['music', 'Music Commands'],
     ['moderation', 'Server Moderation'],
     ['level', 'Level Commands'],
-    ['misc', 'Misc Commands']
+    ['misc', 'Misc Commands'],
+    ['currency', 'Economy Commands']
   ])
   .registerDefaultGroups()
   .registerDefaultCommands({
@@ -55,7 +56,7 @@ client.registry
   .registerCommandsIn(path.join(__dirname, 'commands'))
 
 client.once('ready', () => {
-  console.log('Ready!')
+  console.log('I am Ready!')
 
   setInterval(
     () =>
@@ -80,6 +81,15 @@ client.on('message', async (message) => {
   }
 })
 
+
+// client.on("guildMemberAdd", member => {
+// const welcomeEmbed = new MessageEmbed()
+//     .setColor('#2C2F33')
+//     .setDescription('Hey' + `<@!${member.id}>` + `Don’t forget to introduce yourself to everyone on the introductions channel!\n\nWe’d love to know your coding background`)
+//     .setThumbnail(member.user.displayAvatarURL())
+//     member.guild.channels.cache.find(i => i.name === 'welcome').send(welcomeEmbed)
+// });
+
 client.login(process.env.BOT_TOKEN)
 
-//const keep_alive = require('../keep_alive.js')
+const keep_alive = require('../keep_alive.js')
