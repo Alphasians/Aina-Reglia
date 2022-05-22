@@ -1,6 +1,6 @@
 const { Command } = require('discord.js-commando')
 const { MessageEmbed } = require('discord.js')
-const mongoCurrency = require('discord-mongo-currency');
+const mongoCurrency = require('discord-mongo-currency')
 
 mongoCurrency.connect(process.env.mongoPath)
 
@@ -37,9 +37,10 @@ module.exports = class Economy extends Command {
       await mongoCurrency.giveCoins(member.id, message.guild.id, amt );
       await mongoCurrency.deductCoins(message.member.id, message.guild.id, amt );
       message.reply(`You have transfered ${amt} Coins to <@!${member.id}>`); 
+
    }
-   else{
-     message.reply(`You don't have enough funds to transfer`);
+   else {
+     message.reply(`You don't have enough funds to transfer`)
    }
   }
 }

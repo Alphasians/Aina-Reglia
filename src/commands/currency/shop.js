@@ -25,3 +25,4 @@ module.exports = class Economy extends Command {
     message.channel.send(shopList);
   }
   }
+

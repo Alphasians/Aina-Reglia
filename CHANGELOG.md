@@ -1,3 +1,21 @@
+## [0.5.2](https://github.com/Alphasians/AinaBot/compare/v0.5.1...v0.5.2) (2022-01-30)
+
+
+### Bug Fixes
+
+* coins not deducted ([7f31763](https://github.com/Alphasians/AinaBot/commit/7f31763b09400003cc11c2a7940374149a11f005))
+
+
+
+## [0.5.1](https://github.com/Alphasians/AinaBot/compare/v0.5.0...v0.5.1) (2022-01-28)
+
+
+### Bug Fixes
+
+* bugs in transfer.js ([73fb2d8](https://github.com/Alphasians/AinaBot/commit/73fb2d886ab9101d74fe14682fbaf243d1f39be7))
+
+
+
 # [0.5.0](https://github.com/Alphasians/AinaBot/compare/v0.4.0...v0.5.0) (2021-11-26)
 
 
@@ -23,15 +41,6 @@
 
 * create misc group ([28ab4ae](https://github.com/Alphasians/AinaBot/commit/28ab4ae626bf8887afe22bb03124904e6ccd893e))
 * invite command ([8cbc163](https://github.com/Alphasians/AinaBot/commit/8cbc163b9536b922359707ddac5882e475c9035d))
-
-
-
-## [0.2.2](https://github.com/Alphasians/AinaBot/compare/v0.2.1...v0.2.2) (2021-08-26)
-
-
-### Bug Fixes
-
-* ci ([c4f812f](https://github.com/Alphasians/AinaBot/commit/c4f812ff0a9a7f92b98bc54bcb0c7d21cd4fe2c7))
 
 
 
