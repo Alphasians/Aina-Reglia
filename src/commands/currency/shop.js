@@ -1,8 +1,6 @@
 const { Command } = require('discord.js-commando')
 const { MessageEmbed } = require('discord.js')
-const mongoCurrency = require('discord-mongo-currency');
-
-mongoCurrency.connect(process.env.mongoPath)
+const items = require('../../../models/shopItem.js')
 
 module.exports = class Economy extends Command {
   constructor (client) {
@@ -12,19 +10,19 @@ module.exports = class Economy extends Command {
       memberName: 'shop',
       description: 'List out the various things in the Shop.',
       guildOnly: true,
+      /**
+      *@param {String[]} args
+      */
     })
   }
 
-  async run (message) {
-    const shop = new MessageEmbed()
-      .setTitle('Welcome to the Guild Shop')
-      .setColor('#0099ff')
-      .addFields(
-        { name: 'Pet Bird', value: '8XvZ1j', inline: true  },
-        { name: 'Pet Cat', value: '2Bf2zW', inline: true  },
-        { name: 'Pet Dog', value: 'hErmEm', inline: true  },
-        { name: 'House', value: '2Erf5m' }
-    );
-    message.channel.send(shop);
-   }
+  async run (message,args) {
+    if(items.length === 0) return message.reply("No item on Sale!");
+    message.channel.send('The Items on sale are:-')
+    const shopList = items.map((value,index)=>{
+      return `**${index+1}** ${value.item} -> ${value.price} Coins!`
+    })
+    message.channel.send(shopList);
   }
+  }
+

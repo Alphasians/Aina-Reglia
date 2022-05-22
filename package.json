@@ -8,10 +8,6 @@
     "url": "https://github.com/Alphasians/AinaBot/issues"
   },
   "license": "MIT",
-  "contributors": [
-    "Sonichigo",
-    "Krishdevdb"
-  ],
   "main": "src/index.js",
   "man": [],
   "directories": {
@@ -22,7 +18,7 @@
     "url": "git+https://github.com/Alphasians/AinaBot.git"
   },
   "scripts": {
-    "start": "nodemon src/index.js",
+    "start": "node src/index.js",
     "prepare": "husky install",
     "commit": "npx --no-install cz",
     "lint": "npx eslint .",
@@ -31,17 +27,19 @@
   "dependencies": {
     "@discordjs/opus": "^0.5.3",
     "cheerio": "^1.0.0-rc.10",
+    "discord-economy-super": "^1.5.2",
+    "discord-mongo-currency": "^1.0.4",
     "discord-xp": "^1.1.16",
     "discord.js": "^12.5.3",
     "discord.js-commando": "github:discordjs/Commando",
     "dotenv": "^10.0.0",
     "ffmpeg-static": "^4.4.0",
-    "nodemon": "^2.0.15",
+    "mongoose": "^6.3.4",
     "require-all": "^3.0.0",
     "sequelize": "^6.6.5",
     "simple-youtube-api": "^5.2.1",
     "sqlite": "^4.0.23",
-    "ytdl-core": "^4.9.1"
+    "ytdl-core": "^4.10.0"
   },
   "devDependencies": {
     "@types/node": "^16.4.13",
@@ -65,5 +63,5 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "author": ""
+  "author": "Sonichigo"
 }

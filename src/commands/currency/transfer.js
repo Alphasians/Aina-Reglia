@@ -28,15 +28,16 @@ module.exports = class Economy extends Command {
   }
 
   async run (message, args) {
-   const member = args.recipient
-   const user = await mongoCurrency.findUser(message.member.id, message.guild.id)
-   const recipient = await mongoCurrency.findUser(member.id, message.guild.id)
-   const amt = args.amount
-
+   const member = args.recipient;
+   const user = await mongoCurrency.findUser(message.member.id, message.guild.id);
+   const recipient = await mongoCurrency.findUser(member.id, message.guild.id);
+   const amt = args.amount;
    if (user.coinsInWallet >= amt){
-      await mongoCurrency.giveCoins(member.id, message.guild.id, amt )
-      await mongoCurrency.deductCoins(message.member.id, message.guild.id, amt)
-      message.reply(`You have transfered ${amt} Coins to <@!${member.id}>`)
+      user.coinsInWallet -= amt;
+      await mongoCurrency.giveCoins(member.id, message.guild.id, amt );
+      await mongoCurrency.deductCoins(message.member.id, message.guild.id, amt );
+      message.reply(`You have transfered ${amt} Coins to <@!${member.id}>`); 
+
    }
    else {
      message.reply(`You don't have enough funds to transfer`)
