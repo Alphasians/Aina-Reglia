@@ -27,3 +27,8 @@ A discord bot made using javascript.The official [AinaBOT](https://github.com/Al
 Aina Reglia is licensed under the MIT License. See the file `LICENSE` for more information. If you plan to use any part of this source code in your own bot, I would be grateful if you would include some form of credit somewhere.
 
 ### Thanks to the wonderful Contributors we have
+
+
+<p align="center">
+  <img src="https://github.com/Alphasians/Aina-Reglia/blob/main/CONTRIBUTORS.svg">
+  <br>
