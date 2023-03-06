@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@types/node": "^16.4.13",
-    "commitizen": "^4.2.4",
+    "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.30.0",
     "eslint-config-standard": "^16.0.3",
