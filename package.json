@@ -34,7 +34,7 @@
     "discord.js-commando": "github:discordjs/Commando",
     "dotenv": "^10.0.0",
     "ffmpeg-static": "^4.4.0",
-    "mongoose": "^6.3.4",
+    "mongoose": "^6.11.3",
     "require-all": "^3.0.0",
     "sequelize": "^6.29.0",
     "simple-youtube-api": "^5.2.1",
